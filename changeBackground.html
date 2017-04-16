@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #small{
+            margin-left:28%;
+            margin-top: 2%;
+        }
+        #small div{
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+        }
+        #big{
+            width: 306px;
+            margin: 3% 25%;
+            height: 40px;
+            background: red;
+        }
+        #big div{
+            float: left;
+            width: 50px;
+            border: 1px solid #fff;
+            border-right: 0;
+            line-height: 40px;
+            text-align: center;
+        }
+        #big div a{
+            text-decoration: none;
+            color: #fff;
+        }
+        #big div a:hover{
+            border-bottom: 2px solid #fff;
+        }
+
+        .bg{
+           width: 6px;
+           height: 6px;
+           background: #fff;
+           display: block;
+           margin: 4px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="small">
+            <div style="background: red;"><span></span></div>
+            <div style="background: green;"><span></span></div>
+            <div style="background: blue;"><span></span></div>
+        </div>
+        <div id="big">
+            <div><a href="">新闻</a></div>
+            <div><a href="">娱乐</a></div>
+            <div><a href="">体育</a></div>
+            <div><a href="">电影</a></div>
+            <div><a href="">音乐</a></div>
+            <div class="last"><a href="">旅游</a></div>
+        </div>
+    </div>
+    <script>
+        var small=document.getElementById("small"),
+            divs=small.getElementsByTagName("div"),
+            big=document.getElementById("big"),
+            divs1=big.getElementsByTagName("div"),
+            spans=document.getElementsByTagName("span"),
+            body=document.getElementsByTagName("body")[0],
+            arr=["pink","lightgreen","lightblue"],
+            arr1=["red","green","blue"];
+            big.style.background="red";
+            for(var i=0;i<divs.length;i++){
+                divs[i].index=i;
+                spans[0].className="bg";
+                body.style.background="yellow";
+                divs[i].onclick=function(){
+                    for(var i=0;i<divs.length;i++){
+                        spans[i].className="";
+                        body.style.background="";
+                        big.style.background="";
+                    }
+                    spans[this.index].className="bg";
+                    body.style.background=arr[this.index];
+                    big.style.background=arr1[this.index];
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*for(var j=0;j<divs1.length;j++){
+                divs1[j].index=j;
+                divs1[j].onmouseover=function(){
+                   for(var j=0;j<divs.length;j++){
+                       divs1[j].className="";
+                   }
+                    divs1[this.index].className="as";
+                }
+            }*/
+    </script>
+</body>
+</html>

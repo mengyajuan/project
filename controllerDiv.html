@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #divs{
+            width: 400px;
+            height: 400px;
+            margin: 30px auto;
+        }
+        input{
+            display: inline-block;
+            padding: 10px 21px;
+        }
+        .divCon{
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="divs">
+        <input type="button" value="变宽">
+        <input type="button" value="变高">
+        <input type="button" value="变色">
+        <input type="button" value="隐藏">
+        <input type="button" value="重置">
+        <div class="divCon">
+
+        </div>
+    </div>
+    <script>
+
+        function changeStyle(ele,attr,value){
+            ele.style[attr]=value;
+        }
+            var inputs=document.getElementsByTagName("input"),
+                divCon=document.getElementsByClassName("divCon")[0],
+                attrs=["width","height","background","display","display"],
+                values=["300px","300px","red","none","block"];
+        for(var i=0;i<inputs.length;i++){
+            inputs[i].index=i;
+            //console.log(i)
+            inputs[i].onclick=function(){
+                if(this.index==inputs.length-1){
+                    divCon.style.cssText="width: 200px;height: 200px;background: purple";
+                }
+                changeStyle(divCon,attrs[this.index],values[this.index])
+
+            }
+        }
+
+
+        /*var changeStyle = function (elem, attr, value)
+        {
+            elem.style[attr] = value
+        };
+        window.onload = function ()
+        {
+            var oBtn = document.getElementsByTagName("input");
+            var oDiv = document.getElementById("div1");
+            var oAtt = ["width","height","background","display","display"];
+            var oVal = ["200px","200px","red","none","block"];
+
+            for (var i = 0; i < oBtn.length; i++)
+            {
+                oBtn[i].index = i;
+                oBtn[i].onclick = function ()
+                {
+                    this.index == oBtn.length - 1 && (oDiv.style.cssText = "");
+                    changeStyle(oDiv, oAtt[this.index], oVal[this.index])
+                }
+            }
+        };*/
+
+    </script>
+</body>
+</html>
