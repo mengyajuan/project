@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .outer{
+            margin-left: 45%;
+            margin-top: 10%;
+        }
+        #btn{
+            width: 120px;
+            margin-left: 42px;
+        }
+        #uls{
+            display: none;
+        }
+        #uls li a{
+            text-decoration: none;
+        }
+        #uls li {
+            list-style: none;
+            height: 50px;
+            width:120px;
+            line-height: 50px;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        #uls li:hover{
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <button id="btn">输入法</button>
+        <ul id="uls">
+            <li><a href="javascript:;">手写</a></li>
+            <li><a href="javascript:;">拼音</a></li>
+            <li id="del"><a href="javascript:;">关闭</a></li>
+        </ul>
+    </div>
+    <script>
+        var btn=document.getElementById("btn"),
+                del=document.getElementById("del"),
+                uls=document.getElementById("uls"),
+                style=uls.style;
+        btn.onclick=function(){
+            style.display = style.display == "block" ? "none" : "block"
+
+        }
+        del.onclick=function(){
+            style.display="none";
+        }
+    </script>
+</body>
+</html>
