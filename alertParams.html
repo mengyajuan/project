@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p><input type="text" value="太原"></p>
+    <p><input type="text" value="吕梁"></p>
+    <button id="btn">点击</button>
+    <script>
+        var fn=function(a,b){
+            alert(a.value);
+            alert(b.value);
+        }
+        window.onload=function(){
+            var inputs=document.getElementsByTagName("input"),
+                btn=document.getElementById("btn");
+            btn.onclick=function(){
+                fn(inputs[0],inputs[1])
+            }
+        }
+    </script>
+</body>
+</html>
