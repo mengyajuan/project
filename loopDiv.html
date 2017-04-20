@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #parent{
+            margin-top: 30px;
+        }
+        #wrap{
+            display: flex;
+        }
+        #wrap div{
+            width: 80px;
+            height: 80px;
+            background: blueviolet;
+            margin-top: 40px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <button id="btn">点击将DIV变成红色</button>
+        <div id="wrap">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script>
+        window.onload=function(){
+            var divs=document.getElementById("wrap").getElementsByTagName("div"),
+                 btn=document.getElementById("btn");
+            btn.onclick=function(){
+                for(var i=0;i<divs.length;i++){
+                    divs[i].style.background="red";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
