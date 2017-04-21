@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #big{
+            margin-left: 25%;
+            margin-top:5%;
+        }
+        #small{
+            margin-top: 20px;
+            width: 200px;
+            height: 150px;
+            border: 1px solid red;
+            line-height: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="big">
+        <label for=""><input type="checkbox">两周内自动登录</label>
+        <div id="small">为了您的信息安全，请不要在网吧或公用电脑上使用此功能！</div>
+    </div>
+    <script>
+        var small=document.getElementById("small"),
+                label=document.getElementsByTagName("label")[0];
+        label.onmouseover=function(){
+            small.style.display="block"
+        }
+        label.onmouseout=function(){
+            small.style.display="none"
+        }
+    </script>
+</body>
+</html>
