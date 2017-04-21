@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #btn{
+            width: 10%;
+            display: inline-block;
+            margin: 30px 45%;
+        }
+        #mark{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.5);
+            display: none;
+        }
+        #delDiv{
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -100px;
+            background: skyblue;
+        }
+        #del{
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            display: inline-block;
+            background: red;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">弹出层</button>
+    <div id="mark">
+        <div id="delDiv">
+            <span id="del">X</span>
+        </div>
+    </div>
+    <script>
+        var btn=document.getElementById("btn"),
+            mark=document.getElementById("mark"),
+            del=document.getElementById("del");
+        btn.onclick=function(){
+            mark.style.display="block";
+        }
+       del.onclick=function(){
+           mark.style.display="none";
+       }
+    </script>
+</body>
+</html>
