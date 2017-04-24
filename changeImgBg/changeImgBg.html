@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片列表：鼠标移入/移出改变图片透明度</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            width: 120px;
+            height: 120px;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin-left: 10px;
+            margin-top: 10px;
+            border-radius: 50%;
+        }
+        #wrap{
+            width: 770px;
+            height: 310px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        li{
+            width: 140px;
+            height: 140px;
+            position: relative;
+            left: 0;
+            top: 0;
+            float: left;
+            margin-bottom: 10px;
+            margin-left:10px;
+            border: 1px solid #000;
+            opacity: .5;
+        }
+        .current{
+           opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <ul id="wrap">
+        <li><img src="4.png" alt=""></li>
+        <li><img src="4.png" alt=""></li>
+        <li><img src="4.png" alt=""></li>
+        <li><img src="4.png" alt=""></li>
+        <li><img src="4.png" alt=""></li>
+        <li><img src="4.png" alt=""></li>
+        <li><img src="4.png" alt=""></li>
+        <li><img src="4.png" alt=""></li>
+        <li><img src="4.png" alt=""></li>
+        <li><img src="4.png" alt=""></li>
+    </ul>
+    <script>
+        var wrap=document.getElementById("wrap"),
+            lis=document.getElementsByTagName("li");
+        for(var i=0;i<lis.length;i++){
+            lis[i].onmouseover=function(){
+                this.className="current"
+            }
+            lis[i].onmouseout=function(){
+                this.className=""
+            }
+        }
+    </script>
+</body>
+</html>
