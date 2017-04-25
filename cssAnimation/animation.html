@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css动画(三个点)</title>
+    <style>
+        body{
+            background: #000;
+        }
+        span{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: skyblue;
+            margin-left: 10px;
+        }
+        span{
+             animation:go 1s linear infinite;
+
+        }
+        span:nth-child(1){
+            animation-delay:-.6s;
+        }
+        span:nth-child(2){
+            animation-delay:-.4s;
+        }
+        span:nth-child(3){
+            animation-delay:-.2s;
+        }
+        #wrap{
+            margin:30px auto;
+            width: 160px;
+        }
+        @keyframes go{
+            0%{
+                transform: scale(1);
+            }
+            5%{
+                transform: scale(.6);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
