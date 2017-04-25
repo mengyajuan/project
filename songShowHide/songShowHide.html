@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #outer{
+            width: 400px;
+            height: 300px;
+            margin:50px  auto;
+        }
+        #outer h2{
+            background: #666;
+            height: 50px;
+            color: #fff;
+            line-height: 50px;
+            text-align: center;
+        }
+        #outer h2 span{
+            margin-left: 20px;
+        }
+        #outer ul{
+            background: #ccc;
+        }
+        #outer ul li{
+            line-height: 42px;
+            margin-left: 110px;
+        }
+        #outer ul li a{
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <h2>播放列表...<span id="span">-</span></h2>
+        <ul>
+            <li><a href="javascript:;">玩家之徒 - 蔡依林</a></li>
+            <li><a href="javascript:;">原谅我就是这样的女生 - 戴佩妮</a></li>
+            <li><a href="javascript:;">猜不透 - 丁当</a></li>
+            <li><a href="javascript:;">自导自演 - 周杰伦</a></li>
+            <li><a href="javascript:;">浪漫窝 - 弦子</a></li>
+            <li><a href="javascript:;">流年 - 王菲</a></li>
+        </ul>
+    </div>
+    <script>
+        window.onload=function(){
+            var span=document.getElementById("span"),
+                ul=document.getElementsByTagName("ul")[0];
+            span.onclick=function(){
+                if(span.innerHTML=="-"){
+                    span.innerHTML="+";
+                    ul.style.display="none"
+                }else{
+                    ul.style.display="block"
+                    span.innerHTML="-";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
