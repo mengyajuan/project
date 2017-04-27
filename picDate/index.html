@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			text-align: center;
+			background: #000;
+			font-size: 2.6rem;
+			color: #fff;
+		}
+	</style>
+</head>
+<body id="body">
+	<img src="images/0.png" alt="">
+	<img src="images/0.png" alt="">
+	<img src="images/0.png" alt="">
+	<img src="images/0.png" alt="">
+	:
+	<img src="images/0.png" alt="">
+	<img src="images/0.png" alt="">
+	:
+	<img src="images/0.png" alt="">
+	<img src="images/0.png" alt="">
+	<br/>
+	<img src="images/0.png" alt="">
+	<img src="images/0.png" alt="">
+	:
+	<img src="images/0.png" alt="">
+	<img src="images/0.png" alt="">
+	:
+	<img src="images/0.png" alt="">
+	<img src="images/0.png" alt="">
+	<script>
+	window.onload=fun1
+	function fun1(){
+		var img=document.getElementsByTagName('img');
+		var today=new Date(),
+			time=fun(today.getFullYear())+fun(today.getMonth()+1)+fun(today.getDate())+fun(today.getHours())+fun(today.getMinutes())+fun(today.getSeconds());
+			//alert(time)
+			for(var i=0;i<img.length;i++){
+				img[i].src="images/"+time[i]+".png"
+			}
+	}setInterval(fun1,1000)
+		
+		function fun(t){
+			if(t<10){
+				return "0"+t
+			}else{
+				return ""+t
+			}
+		}
+
+	</script>
+
+</body>
+</html>
