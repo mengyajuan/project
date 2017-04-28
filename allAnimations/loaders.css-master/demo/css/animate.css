@@ -1,0 +1,141 @@
+/* line 1, animate.scss */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* line 6, animate.scss */
+body {
+  background: #ed5565;
+  color: #fff;
+  font-family: 'Source Sans Pro'; }
+
+/* line 11, animate.scss */
+.wrapp {
+  width: 95%;
+  margin: 50px auto; }
+
+/* line 15, animate.scss */
+.main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 auto; }
+
+/* line 22, animate.scss */
+.loader {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex-basis: 25%;
+  max-width: 25%;
+  height: 200px; }
+
+/*1*/
+/* line 36, animate.scss */
+.animate1 > div {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px; }
+
+@keyframes animate1 {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  45% {
+    transform: scale(0.3);
+    opacity: 0.3; }
+  80% {
+    transform: scale(1);
+    opacity: 1; } }
+/* line 58, animate.scss */
+.animate1 > div:nth-child(1) {
+  animation: animate1 0.75s -0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+
+/* line 61, animate.scss */
+.animate1 > div:nth-child(2) {
+  animation: animate1 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+
+/* line 64, animate.scss */
+.animate1 > div:nth-child(3) {
+  animation: animate1 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+
+/*2*/
+/* line 69, animate.scss */
+.animate2 > div {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  animation-fill-mode: both;
+  position: relative;
+  animation: animate2 .8s 0s linear infinite; }
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(0.6); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+/* line 90, animate.scss */
+.animate3 {
+  position: relative;
+  margin: 12% auto; }
+
+/* line 95, animate.scss */
+.animate3 > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  animation-fill-mode: forwards; }
+
+/* line 102, animate.scss */
+.animate3 > div:first-child {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  top: 7px;
+  left: -7px;
+  animation: animate3 3s 0.3s cubic-bezier(0.3, 0.36, 0.57, 0.67) infinite;
+  animation-play-state: paused; }
+
+/* line 111, animate.scss */
+.animate3 > div:last-child {
+  border: 2px solid #fff;
+  position: absolute;
+  top: -2px;
+  left: -16px;
+  width: 30px;
+  height: 30px;
+  border-color: #fff transparent #fff transparent;
+  animation: animate3Rotate 1s 0s cubic-bezier(0.3, 0.36, 0.57, 0.67) infinite;
+  animation-duration: 3s;
+  animation-play-state: running; }
+
+@keyframes animate3 {
+  0% {
+    transform: scale(0.3); }
+  50% {
+    transform: scale(0.5); }
+  100% {
+    transform: scale(1); } }
+@keyframes animate3Rotate {
+  0% {
+    transform: rotate(0deg) scale(0.3); }
+  50% {
+    transform: rotate(180deg) scale(0.5); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+
+/*# sourceMappingURL=animate.css.map */

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.demo_box{
+    -webkit-animation:f1 2s 0.5s 1  linear;
+    -moz-animation:f1 2s 0.5s 1  linear;
+    position:relative;
+    left:10px;
+    width:100px;
+    height:100px;
+    margin:10px 0;
+    overflow:hidden;
+}
+.forwards{ 
+    -webkit-animation-fill-mode:both;
+	background:skyblue;
+/*	animation-direction:alternate-reverse;*/
+/*	animation-iteration-count: 4;*/
+}
+.backwards{
+    -webkit-animation-fill-mode:both;
+	background:pink;
+}
+@-webkit-keyframes f1{
+    0%{left:10px;}
+    100%{left:500px;}
+}
+@-moz-keyframes f1{
+    0%{left:10px;}
+    100%{left:500px;}
+}             
+	</style>
+</head>
+<body>
+	<div class="demo_box forwards">我留在终点</div>
+	<div class="demo_box backwards">我只回到原点</div>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
