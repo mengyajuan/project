@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        #box{
+            width: 838px;
+            height: 405px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        #box img{
+            float: left;
+            position: absolute;
+            width: 538px;
+            height: 405px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+    <img src="img/4.jpg" alt="">
+    <img src="img/5.jpg" alt="">
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+</div>
+    <script>
+        var box=document.getElementById("box"),
+             imgs=box.getElementsByTagName("img");
+        for(var i=0;i<imgs.length;i++){
+            if(i>0){
+                imgs[i].style.left=538+(i-1)*50+"px";
+            }
+            imgs[i].index=i;
+            imgs[i].onmouseover=function(){
+                for(var i=0;i<imgs.length;i++){
+                    imgs[i].style.left = imgs[0].offsetWidth + (i - 1) * 50 + "px";
+                }
+                for(var j=0;j<=this.index;j++){
+                    imgs[j].style.left =  50*j+ "px";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
