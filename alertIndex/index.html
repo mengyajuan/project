@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击弹出索引</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        //第一种
+
+        /*var lis=document.getElementsByTagName("li");
+        for(var i=0;i<lis.length;i++){
+            lis[i].setAttribute("data-num",i)
+        }
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick=function(){
+                alert(this.getAttribute("data-num"))
+            }
+        }*/
+
+        //第二种
+        /*var lis=document.getElementsByTagName("li");
+        for(var i=0;i<lis.length;i++){
+            lis[i].index=i;
+            lis[i].onclick=function(){
+                alert(this.index)
+            }
+        }*/
+
+        //第三种  闭包
+        var lis=document.getElementsByTagName("li");
+        for(var i=0;i<lis.length;i++){
+            (function(i){
+                lis[i].onclick=function(){
+                    alert(i)
+                }
+            })(i)
+        }
+    </script>
+</body>
+</html>
