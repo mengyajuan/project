@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户输入秒数,点击确定后开始倒计时</title>
+</head>
+<body>
+<input type="text" placeholder="请输入秒数" id="sec">
+<button id="show">确定</button>
+<div id="secshow"></div>
+<script>
+    var show=document.getElementById("show"),
+         sec=document.getElementById("sec"),
+         secshow=document.getElementById("secshow"),
+         time=null;
+    show.onclick=function(){
+        var secT=parseInt(sec.value);
+        time=setInterval(function(){
+            if(secT>0){
+                secshow.innerHTML=secT--;
+            }else{
+                clearInterval(time)
+            }
+        },1000)
+    }
+</script>
+</body>
+</html>
