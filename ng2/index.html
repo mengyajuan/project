@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="App">
+    姓名: <input type="text" ng-model="name"><br/>
+    性别: <input type="radio" name="sex" value="女" ng-model="sex">女
+          <input type="radio" name="sex" value="男" ng-model="sex">男<br/>
+    兴趣: <input type="checkbox" name="aihao" ng-model="hobby1" ng-true-value="游泳" ng-false-value="无选择1">游泳
+          <input type="checkbox" name="aihao" ng-model="hobby2" ng-true-value="唱歌" ng-false-value="无选择2">唱歌
+          <input type="checkbox" name="aihao" ng-model="hobby3" ng-true-value="shopping" ng-false-value="无选择3">购物<br/>
+
+   {{name}}基本信息如下
+    性别{{sex}}
+    兴趣是: {{hobby1}}  {{hobby2}}  {{hobby3}}
+    <script src="js/angular.js"></script>
+    <script>
+        angular.module("App",[]);
+    </script>
+</body>
+</html>
